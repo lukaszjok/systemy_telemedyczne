@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.8.8)  8 OCT 2016 17:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.8.8)  8 OCT 2016 17:59
 entering extended mode
 **./essay_1.tex
 (essay_1.tex
@@ -613,14 +613,14 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 147.
 
-[4 <./Pictures/placeholder.png>]
-<Pictures/fish.png, id=23, 211.79124pt x 158.5925pt>
+[4 <./Pictures/placeholder.png>] [5]
+<Pictures/fish.png, id=26, 211.79124pt x 158.5925pt>
 File: Pictures/fish.png Graphic file (type png)
  <use Pictures/fish.png>
-Package pdftex.def Info: Pictures/fish.png used on input line 169.
+Package pdftex.def Info: Pictures/fish.png used on input line 170.
 (pdftex.def)             Requested size: 158.93843pt x 119.01907pt.
 
-[5] [6 <./Pictures/fish.png>] [7] [8] (essay_1.aux) ) 
+[6 <./Pictures/fish.png>] [7] [8] (essay_1.aux) ) 
 Here is how much of TeX's memory you used:
  2840 strings out of 493335
  36732 string characters out of 3145275
@@ -629,13 +629,13 @@ Here is how much of TeX's memory you used:
  14507 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,5n,25p,1670b,263s stack positions out of 5000i,500n,10000p,200000b,50000s
-{d:/MiKTeX 2.9/fonts/enc/d
-vips/pl/plrm.enc}{d:/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}{d:/MiKTeX 2.9/font
-s/enc/dvips/pl/plsc.enc}<d:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><d:/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><d:/MiKTeX 2.9/fonts/type1/pu
-blic/pl/plcsc10.pfb><d:/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><d:/MiKTeX 2
-.9/fonts/type1/public/pl/plti12.pfb>
-Output written on essay_1.pdf (9 pages, 87159 bytes).
+{d:/MiKTeX 2.9/fonts/enc/dvips
+/pl/plrm.enc}{d:/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}{d:/MiKTeX 2.9/fonts/en
+c/dvips/pl/plsc.enc}<d:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d
+:/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><d:/MiKTeX 2.9/fonts/type1/public
+/pl/plcsc10.pfb><d:/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><d:/MiKTeX 2.9/f
+onts/type1/public/pl/plti12.pfb>
+Output written on essay_1.pdf (9 pages, 88246 bytes).
 PDF statistics:
  58 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
