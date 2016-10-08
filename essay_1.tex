@@ -1,0 +1,232 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Simple Sectioned Essay Template
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing essay content.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article} % Default font size is 12pt, it can be changed here
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+
+\usepackage{geometry} % Required to change the page size to A4
+\geometry{a4paper} % Set the page size to be A4 as opposed to the default US Letter
+
+\usepackage{graphicx} % Required for including pictures
+
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{wrapfig} % Allows in-line images such as the example fish picture
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\linespread{1.2} % Line spacing
+
+%\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
+
+\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+
+\textsc{\LARGE Politechnika Wrocławska}\\[1.5cm] % Name of your university/college
+\textsc{\Large Systemy telemedyczne}\\[0.5cm] % Major heading such as course name
+\textsc{\large Kod kursu: TLEU00102P, Termin: Czwartek, 15:15-16:55}\\[0.5cm] % Minor heading such as course title
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Teleinformatyczne systemy przywoławcze w placówkach medycznych}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Autorzy:}\\
+Łukasz \textsc{Joksch}(200963) \\
+Tomasz \textsc{Kowalik}(200943) \\
+Piotr \textsc{Tazbir}(201029)
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Opiekun:} \\
+dr. Edward \textsc{Puchała} % Supervisor's Name
+\end{flushright}
+\end{minipage}\\[4cm]
+
+{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+
+%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Include a table of contents
+
+\newpage % Begins the essay on a new page instead of on the same page as the table of contents 
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\section{Wstęp} % Major section
+
+Celem niniejszego projektu jest opracowanie zaawansowanego systemu przywoławczego dla placówek medycznych, usprawniającego monitorowanie stanu zdrowia pacjenta oraz umożliwienie szybkiej reakcji personelu w przypadkach nadania sygnału przywoławczego przez chorego. Dzięki gromadzeniu informacji parametrach medycznych pacjenta możliwym będzie odwołanie się do tych danych w przyszłości. Wszystko to dąży do poprawy standardów życia oraz jakości opieki nad pacjentami. Jest dedykowany dla każdej jednostki medycznej, w której zachodzi konieczność całodobowego monitorowania stanu zdrowia pacjenta. \\
+Główne założenia tego projektu mogą wydać się rewolucyjne, a wręcz futurystyczne. Należy jednak mieć na uwadze, że to co dziś wydaje się niewykonalnym, za kilka lat może okazać powszechnym standardem.
+%------------------------------------------------
+
+\subsection{Systemy przywoławcze, a regulacje prawne} % Sub-section
+
+Poruszany temat jest szczególnie istotny, gdyż zgodnie z rozporządzeniem Ministra Zdrowia z dnia 3. Listopada 2011 w sprawie szpitalnego oddziału ratunkowego obliguje się jednostki medyczne związane z segregacją medyczną do implementacji takich systemów. Również w Rozporządzeniu Ministra Polityki Społecznej z 19. Października 2005 w sprawie domów pomocy społecznej (Dz.U. z 2005 r., nr217, poz. 1837) wymaga się stosowania systemów przyzywowych w tego typu placówkach. Szczególnie istotnym aktem prawnym dotyczącym poruszanych zagadnień jest obowiązująca w Polsce norma PN-EN ISO 11073, która zawiera ogólne wytyczne dotyczące sposobu komunikacji między urządzeniami związanymi ze zdrowiem pacjenta. Wspomniana norma, szczególnie zwraca uwagę aby stosowane rozwiązania pozwalały na gromadzenie informacji o akcji takich urządzeń w postaci historii, z uwzględnieniem możliwości identyfikacji każdego urządzenia. Ponadto, każde zdarzenie powinno być dodatkowo precyzyjnie zarchiwizowane, tj. powinno zawierać datę i godzinę wystąpienia akcji. Niezbędnym jest także warunek zachowania interoperacyjności i zgodności systemów, tak aby stosowane rozwiązanie umożliwiała swobodną wymianę danych między różnymi systemami, w tym także z istniejącą już infrastrukturą. Warunek ten może być spełniony przez wykorzystanie międzynarodowych standardów komunikacji przywoławczych, np. POCSAG. Optymalnym rozwiązaniem wydaje się być funkcjonalność polegająca na możliwości implementacji różnych standardów, tudzież protokołów w zależności od wymagań jednostki medycznej.
+W tym miejscu należy wspomnieć o tym, iż o ile polskie prawo zobowiązuje placówki medyczne do stosowania systemów przywoławczych, co więcej wskazuje metody komunikacji w obrębie takiego systemu, jednak w żaden sposób nie są prezentowane wytyczne co do samego systemu. Fakt ten, sprawia, że projektanci oraz konstruktorzy sprzętu oraz oprogramowania mają sporą dowolność, która może wiązać się z niebezpieczeństwem polegającym na wprowadzaniu na rynek produktów słabej jakości. 
+
+
+%------------------------------------------------
+
+\subsection{Wady i zalety aktualnych rozwiązań} % Sub-section
+Aktualnie na rynku istnieje wiele rozwiązań wspierających komunikację między pacjentami a personele szpitala. Jednak ze względu ich komercyjny charakter ich główną cechą wspólną jest indywidualność i nowatorstwo. Niezaprzeczalnie, są to ich ogromne zalety, jednak w ty samym momencie stają się także ich poważnymi wadami. Po pierwsze, częstokroć ile razy konieczna będzie rozbudowa systemu, placówka, jest uzależniona od firmy instalującej system. Hermetyczność biznesowa powoduje, że konkurencyjni dostawcy usług niechętnie dzielą się swoimi rozwiązaniami, wiedza. Takie zjawisko sprzyja monopolizacji rynku, co nie jest korzystnym dla rozwoju gospodarki i tworzeniu nowych technologii. Poza czynnikami stricte biznesowymi i politycznymi, ważnym obszarem jest podejście technologiczne oraz rozwiązania techniczne. Do głównych wad, większości aktualnych systemów możemy zaliczyć:
+\begin{enumerate}
+\item Stosowanie wielu różnych systemów i języków programowania;
+\item Zamknięte oprogramowanie;
+\item Ogromne wymagania zasobów sprzętowych;
+\item Duże zapotrzebowanie za energię elektryczną;
+\item Uzależnienie działania od funkcjonowania; infrastruktury energii elektrycznej(dostarczanej z sieci);
+\item Podatność na zakłócenia - utrata integralności i niezawodności pracy;
+\item Duże koszty produkcji i utrzymania;
+\item Problematyczne aktualizacje;
+\item Zamknięte grono osób posiadających wiedzę o systemie.
+\end{enumerate}
+
+W związku z występowaniem wielu wad takowych systemów na, bądź co bądź, dość ogólnym poziomie analizy jednym z celi tego projektu będzie próba przedstawienia rozwiązań eliminujących zidentyfikowane problemy.
+
+%------------------------------------------------
+
+
+
+\begin{figure}[H] % Example image
+\center{\includegraphics[width=0.5\linewidth]{placeholder}}
+\caption{Example image.}
+\label{fig:speciation}
+\end{figure}
+
+
+%----------------------------------------------------------------------------------------
+%	MAJOR SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Założenia projektowe} % Major section
+
+W tym rozdziale przedstawione zostaną główne założenia projektowe. Należy jednak zauważyć, iż poruszanie zagadnienie jest problemem wielopoziomowym, ale też interdyscyplinarnym. Dotyka bowiem wielu obszarów, które z pozoru nie są ze sobą ściśle skorelowane. Jednak po przemyślanej analizie i usystematyzowaniu wymagań i potrzeb wynikających z istnienia ich wszystkich finalnie może powstać sprawnie działający system.
+
+\subsection{Uniwersalność}
+Chcąc, choćby częściowo, stworzyć system otwarty ale także taki, dzięki któremu przedsiębiorcy nadal będą mogli zarabiać pieniądze należy stworzyć odpowiedni, optymalny model systemu. Proponujemy czterowarstwowy model przywoławczy:
+\begin{itemize}
+\item Warstwa Informacji - odpowiada za tworzenie nagłówków przesyłanych informacji, określa ich format i typ(rodzaj). Definiuje strukturę i jakość informacji  dostarczanej przez nośniki informacji określone w warstwie transportowej i Sprzętowej;
+\item Warstwa Sprzętowa - określa jaki sprzęt zastosowano w całym systemie;
+\item Warstwa Transportowa - definiuje protokoły i sposoby transportu i gromadzenia informacji;
+\item Warstwa Aplikacji i Usług - określa zbiór zastosowanego oprogramowania, usług i serwerów.
+\end{itemize}
+
+Istotną kwestią, rewolucją względem dotychczas stosowanych rozwiązań, jest budowa systemu przywoławczego opierając się na oprogramowaniu open-source. Dzięki takiemu podejściu chcą rozbudować system nie będzie koniecznym dodatkowe gromadzenie informacji implementacji aktualnego rozwiązania, gdyż będzie ono zawierało sprawdzone, ogólnodostępne oprogramowanie, interfejsy czy protokoły.
+%------------------------------------------------
+
+\subsection{Subsection 1} % Sub-section
+
+\subsubsection{Subsubsection 1} % Sub-sub-section
+
+\lipsum[6] % Dummy text
+
+%------------------------------------------------
+
+\subsubsection{Subsubsection 2} % Sub-sub-section
+
+\lipsum[6] % Dummy text
+\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
+  \begin{center}
+    \includegraphics[width=0.38\textwidth]{fish}
+  \end{center}
+  \caption{Fish}
+\end{wrapfigure}
+\lipsum[7-8] % Dummy text
+
+%------------------------------------------------
+
+\subsubsection{Subsubsection 3} % Sub-sub-section
+
+\begin{description} % Numbered list example
+
+\item[First] \hfill \\
+\lipsum[9] % Dummy text
+
+\item[Second] \hfill \\
+\lipsum[10] % Dummy text
+
+\item[Third] \hfill \\
+\lipsum[11] % Dummy text
+
+\end{description} 
+
+%----------------------------------------------------------------------------------------
+%	MAJOR SECTION X - TEMPLATE - UNCOMMENT AND FILL IN
+%----------------------------------------------------------------------------------------
+
+%\section{Content Section}
+
+%\subsection{Subsection 1} % Sub-section
+
+% Content
+
+%------------------------------------------------
+
+%\subsection{Subsection 2} % Sub-section
+
+% Content
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSION
+%----------------------------------------------------------------------------------------
+
+\section{Conclusion} % Major section
+
+\lipsum[12-13]
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+
+\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
+Figueredo, A.~J. and Wolf, P. S.~A. (2009).
+\newblock Assortative pairing and life history strategy - a cross-cultural
+  study.
+\newblock {\em Human Nature}, 20:317--330.
+ 
+\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
