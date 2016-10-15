@@ -199,8 +199,13 @@ Sercem systemu, a dokładniej, jego trzema głównymi trzonami będą 3 serwery 
 
 Dla zapewnienia łączności pomiędzy poszczególnymi elementami rozwiązania zbudowana zostanie zamknięta sieć LAN - INTRANET, uniemożliwiając w ten sposób dostęp do zasobów osób trzecich. Jednak temu zagadnieniu zostanie poświęcony osobny paragraf.
 
-\subsection{Przepływ informacji, model sieci}
+\section{Przepływ informacji, model sieci}
 
+Zgodnie z wcześniejszymi założeniami w projekcie możliwym jest wyszczególnienie warstwy odnoszącej się do przepływu danych. Dla prawidłowego działania całego systemu koniecznym jest istnienie sieci komputerowej. Chcąc zapewnić najwyższy poziom bezpieczeństwa zalecaną jest implementacja sieci przeznaczone wyłącznie dla proponowanego rozwiązania, zarówno odnosząc się do urządzeń sieciowych takich jak przełączniki, rozdzielacze czy punkty dostępowe jak i unikalna, przemyślana  i spójna adresacja IP. Jest to rozwiązanie optymalne, jednak nie jest koniecznym do rozpoczęcia realizacji projektu. W przypadku gdy placówka medyczna posiada już infrastrukturę sieciową możliwym jest zastosowanie rozwiązań typu VLAN czy VPN. W dużej mierze zastosowanie danego podejścia jest ściśle zależne od polityki bezpieczeństwa i zasobów teleinformatycznych danej placówki. W kontekście projektu wymogiem koniecznym do jego realizacji jest zapewnienie niezakłóconego, ciągłego dostępu do sieci informatycznej,  umożliwiającej przesyłanie danych z wykorzystaniem protokołu TCP i UDP dla wszystkich urządzeń.
+
+\subsection{Zastosowane protokoły}
+
+Jak już wcześniej wspomniano, na poziomie warstwy łącza danych modelu OSI/ISO zastosowane będą protokoły TCP i UDP do przesyłania pakietów danych. Jenak na poziomie warstwy aplikacji wykorzystano protokółu HTTP w wersji drugiej do przesyłania informacji stricte związanych z obsługą zdarzeń - np.  identyfikator urządzenia, numer pokoju, rodzaj zgłoszenia. Zdecydowano się właśnie na takie podejście, ze względu na dojrzałość protokołu, bardzo dobre wsparcie techniczne oraz łatwą możliwość śledzenia poprawności generowanych zapytań. Ponadto protokół ten nawiązując połączenie z węzłem docelowym wysyła informację do urządzenia źródłowego, w której infrmuje czy połączenie zostało nawiązane prawidłowo. Dodatkowo nowa (druga) wersja protokołu pozwala na możliwość szyfrowania połączenia na poziomie tego protokołu z pominięciem doatkowych serwerów, tudzież usług szyfrujących.
 
 \section{Zasilanie}
 \subsection{Zasilanie awaryjne}
