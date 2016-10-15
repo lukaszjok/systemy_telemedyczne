@@ -170,8 +170,20 @@ W nawiązaniu do głównego zamysłu dotyczącego obsługi zdarzeń, gromadzenia
 
 \subsection{Rodzaje przywołań oraz ich oznaczenia}
 
-W przypadku 
+W projekcie przewidziano 3 rodzaje przywołań - alarmów:
+\begin{enumerate}
+\item krytyczne - przywołanie w przypadku problemów zdrowotnych, zaburzenie funkcji życiowych lub problemy ze zdrowiem, samopoczuciem
+\item standardowe - przywołanie związane z obsługą pacjenta i jego codzienna egzystencją, tj. dotyczące szczególnie pomocy pielęgniarskiej, np. pomoc w kąpieli, załatwianiu potrzeb fizjologicznych.
+\item komfortowe - dotyczące przywołań związanych z komfortem pobytu w placówce medycznej, np. prośba uruchomienia telewizora, zasłonięcie rolet czy poprawienie pościeli.
+\end{enumerate}
 
+W zależności od rodzaju przywołania przewidziano dla każdego z nich odpowiednią barwę koloru. W nawiązaniu do nich projektowane będą kolejne elementy systemu.
+
+\begin{itemize}
+\item barwa CZERWONA - dla przywołania krytycznego;
+\item barwa ŻÓŁTA - dla przywołania standardowego;
+\item barwa ZIELONA - dla przywołania komfortowego.
+\end{itemize}
 \subsection{Rozwiązania sprzętowe}
 
 Począwszy od terminali pacjentów, należy wspomnieć, iż będą to własne urządzenia skonstruowane specjalnie na potrzeby tego projektu. Oparte o mikrokontroer STM32 z rdzeniem CORTEX. Terminal będzie zawierał 4 duże, ergonomiczne przyciski o barwach odpowiadającym rodzajom wezwania, o których będzie mowa w kolejnych rozdziałach. Jeden z przycisków służyć będzie do odwołania przywołania, np. w chwili omyłkowego wduszenia przycisku. 

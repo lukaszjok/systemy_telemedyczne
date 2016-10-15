@@ -7,3 +7,5 @@
 \contentsline {subsection}{\numberline {2.3}Miniaturyzacja}{5}
 \contentsline {section}{\numberline {3}Koncepcja rozwi\IeC {\k a}zania}{6}
 \contentsline {subsection}{\numberline {3.1}Og\IeC {\'o}lny zarys koncepcyjny}{6}
+\contentsline {subsection}{\numberline {3.2}Rodzaje przywo\IeC {\l }a\IeC {\'n} oraz ich oznaczenia}{7}
+\contentsline {subsection}{\numberline {3.3}Rozwi\IeC {\k a}zania sprz\IeC {\k e}towe}{7}
