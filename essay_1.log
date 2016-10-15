@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.8.8)  8 OCT 2016 17:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.8.8)  15 OCT 2016 13:31
 entering extended mode
 **./essay_1.tex
 (essay_1.tex
@@ -465,20 +465,20 @@ Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 ) (essay_1.aux)
 \openout1 = `essay_1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -569,29 +569,29 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Font Info:    Try loading font information for OML+plm on input line 66.
+LaTeX Font Info:    Try loading font information for OML+plm on input line 68.
 
 ("d:\MiKTeX 2.9\tex\latex\polski\omlplm.fd"
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 66.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 68.
 
 
 ("d:\MiKTeX 2.9\tex\latex\polski\omsplsy.fd"
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 66.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 68.
 
 
 ("d:\MiKTeX 2.9\tex\latex\polski\omxplex.fd"
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 66.
+(Font)              <12> on input line 68.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 66.
+(Font)              <8> on input line 68.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 66.
+(Font)              <6> on input line 68.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (essay_1.toc)
@@ -599,45 +599,32 @@ LaTeX Font Info:    External font `plex10' loaded for size
 \openout3 = `essay_1.toc'.
 
  [1] [2] [3]
-<Pictures/placeholder.png, id=18, 281.05pt x 170.6375pt>
-File: Pictures/placeholder.png Graphic file (type png)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 140.
 
-<use Pictures/placeholder.png>
-Package pdftex.def Info: Pictures/placeholder.png used on input line 130.
-(pdftex.def)             Requested size: 209.12683pt x 126.97015pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 147.
 
- ("d:\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+("d:\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 147.
-
-[4 <./Pictures/placeholder.png>] [5]
-<Pictures/fish.png, id=26, 211.79124pt x 158.5925pt>
-File: Pictures/fish.png Graphic file (type png)
- <use Pictures/fish.png>
-Package pdftex.def Info: Pictures/fish.png used on input line 170.
-(pdftex.def)             Requested size: 158.93843pt x 119.01907pt.
-
-[6 <./Pictures/fish.png>] [7] [8] (essay_1.aux) ) 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 140.
+ [4] [5] [6] (essay_1.aux) ) 
 Here is how much of TeX's memory you used:
- 2840 strings out of 493335
- 36732 string characters out of 3145275
- 206707 words of memory out of 3000000
- 6310 multiletter control sequences out of 15000+200000
+ 2824 strings out of 493335
+ 36447 string characters out of 3145275
+ 206699 words of memory out of 3000000
+ 6298 multiletter control sequences out of 15000+200000
  14507 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,5n,25p,1670b,263s stack positions out of 5000i,500n,10000p,200000b,50000s
-{d:/MiKTeX 2.9/fonts/enc/dvips
-/pl/plrm.enc}{d:/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}{d:/MiKTeX 2.9/fonts/en
-c/dvips/pl/plsc.enc}<d:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d
-:/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><d:/MiKTeX 2.9/fonts/type1/public
-/pl/plcsc10.pfb><d:/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><d:/MiKTeX 2.9/f
-onts/type1/public/pl/plti12.pfb>
-Output written on essay_1.pdf (9 pages, 88246 bytes).
+ 40i,4n,25p,1670b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
+{d:/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{d:/MiKT
+eX 2.9/fonts/enc/dvips/pl/plit.enc}{d:/MiKTeX 2.9/fonts/enc/dvips/pl/plsc.enc}<
+d:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/MiKTeX 2.9/fonts/ty
+pe1/public/pl/plbx12.pfb><d:/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><d:/M
+iKTeX 2.9/fonts/type1/public/pl/plr12.pfb><d:/MiKTeX 2.9/fonts/type1/public/pl/
+plti12.pfb>
+Output written on essay_1.pdf (7 pages, 68947 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
+ 49 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -17,6 +17,8 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[12pt]{article} % Default font size is 12pt, it can be changed here
+
+
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
 
@@ -122,15 +124,6 @@ Aktualnie na rynku istnieje wiele rozwiązań wspierających komunikację międz
 
 W związku z występowaniem wielu wad takowych systemów na, bądź co bądź, dość ogólnym poziomie analizy jednym z celi tego projektu będzie próba przedstawienia rozwiązań eliminujących zidentyfikowane problemy.
 
-%------------------------------------------------
-
-
-
-\begin{figure}[H] % Example image
-\center{\includegraphics[width=0.5\linewidth]{placeholder}}
-\caption{Example image.}
-\label{fig:speciation}
-\end{figure}
 
 
 %----------------------------------------------------------------------------------------
@@ -156,63 +149,33 @@ Istotną kwestią, rewolucją względem dotychczas stosowanych rozwiązań, jest
 \subsection{Modularyzacja} % Sub-section
 Chcąc sprawić, by system przywoławczy był sprawnie funkcjonującym należy dążyć do jego decentralizacji - zarówno pod względem sprzętowym , jak i w ujęciu programowym. Dzięki takiemu rozwiązaniu w przypadku awarii jednego z komponentów nie zostanie zakłócona integralność. Co więcej system powinie być w stanie zlokalizować źródło problemu i w miarę możliwości być w stanie obsłużyć tą sytuację umożliwiając kontynuację pracy bez uszkodzonych elementów infrastruktury.
 Taką modularyzację można realizować przez instalację poszczególnych usług czy oprogramowania na kolejnych fizycznych serwerach. W przypadku wymiany informacji zastosowane zostaną Punkty dostępowe sieci WLAN, chcąc zwiększyć dostępność sieci - wystarczy zainstalować kolejne takie urządzenie lub zastosować antenę, zwiększającą zasięg. 
-\subsubsection{Subsubsection 1} % Sub-sub-section
+\subsection{Miniaturyzacja} % Sub-sub-section
+Całkowicie nowym podejściem jakie zostanie zastosowane w projekcie jest porzucenie kosztownych i zużywających wiele energii elektrycznej serwerów i urządzeń im towarzyszących. W zamian użyte zostaną mikrokomputery Raspberry Pi 3. Ich parametry techniczne pozwalają na implementację zaawansowanych serwerów i usług. Ze względu na bardzo małe koszty związane z zakupem tego sprzętu możliwym jest instalacja poszczególnych usług na kolejnych urządzeniach. Dzięki temu uzyskamy izolację między systemami, która może być użyteczną w przypadku awarii. Ich minimalne zapotrzebowanie na prąd pozwoli na długoterminowe funkcjonowanie rozwiązania na zasilaniu akumulatorowym. Poniżej przedstawiono opis mikrokomputera Raspberry Pi 3:
+\begin{itemize}
+\item Procesor chipset - Broadcom BCM2837 64-bit
+\item Rdzeń	Quad-Core - ARM Cortex A53
+\item Taktowanie - 1,2 GHz
+\item Pamięć RAM - 1 GB LPDDR2 @ 900 MHz
+\item Zasilanie	- 5,1 V 
+\item Pobór prądu ~300-400 mAh
+\end{itemize}
 
-\lipsum[6] % Dummy text
+\section{Koncepcja rozwiązania}
+W tym rozdziale zostaną przedstawione informacje dotyczące implementacji każdego z modułu projektu. Zgodnie z wcześniej przyjętym czterowarstwowym modelem - dla każdej warstwy podane zostaną informacje dotyczące jej funkcjonowania i oddziaływania na pozostałe warstwy.
 
-%------------------------------------------------
+\subsection{Ogólny zarys koncepcyjny}
+System przywoławczy opiera się o wykorzystanie dedykowanych urządzeń: pilotów dla pacjentów, modułów przywoławczych dla pacjentów z ograniczonymi funkcjami życiowymi, centrali obsługującej przywołania i trójkolorowego oświetlenia LED wskazującego rodzaj alarmu. Poza rozwiązaniem stricte sprzętowym, zaimplementowana zostanie aplikacja mobilna na najbardziej popularne systemy telefonów(smartfonów).
+\\
+W nawiązaniu do głównego zamysłu dotyczącego obsługi zdarzeń, gromadzenia informacji o pacjentach i modelu reagowania na te zdarzenia, system będzie realizował możliwie najprostsze ale co ważne - najnowocześniejsze technologie. W chwili gdy pacjent przy pomocy dowolnego narzędzia zasygnalizuje chęć przywołania personelu medycznego - zgłoszenie to natychmiastowo trafi do odpowiedzialnej kadry, system zapisze godzinę, dane pacjenta, oraz rodzaj przywołania. W tej samej chwili na zewnątrz sali szpitalnej zaświeci się lampka przyjmująca barwę odpowiadającą danemu zgłoszeniu. Pozwoli to personelowi na szybką identyfikację odpowiedniej sali. Ponadto na panelu centrali pojawi się także takowa informacja  - z informacją o numerem sali oraz szczegółowe informacje o pacjencie - jego personalia, historia poprzednich przywołań oraz skrót przebiegu choroby(powód hospitalizacji).
 
-\subsubsection{Subsubsection 2} % Sub-sub-section
+\subsection{Rodzaje przywołań oraz ich oznaczenia}
 
-\lipsum[6] % Dummy text
-\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
-  \begin{center}
-    \includegraphics[width=0.38\textwidth]{fish}
-  \end{center}
-  \caption{Fish}
-\end{wrapfigure}
-\lipsum[7-8] % Dummy text
+W przypadku 
 
-%------------------------------------------------
+\subsection{Rozwiązania sprzętowe}
 
-\subsubsection{Subsubsection 3} % Sub-sub-section
+Począwszy od terminali pacjentów, należy wspomnieć, iż będą to własne urządzenia skonstruowane specjalnie na potrzeby tego projektu. Oparte o mikrokontroer STM32 z rdzeniem CORTEX. Terminal będzie zawierał 4 duże, ergonomiczne przyciski o barwach odpowiadającym rodzajom wezwania, o których będzie mowa w kolejnych rozdziałach. Jeden z przycisków służyć będzie do odwołania przywołania, np. w chwili omyłkowego wduszenia przycisku. 
 
-\begin{description} % Numbered list example
-
-\item[First] \hfill \\
-\lipsum[9] % Dummy text
-
-\item[Second] \hfill \\
-\lipsum[10] % Dummy text
-
-\item[Third] \hfill \\
-\lipsum[11] % Dummy text
-
-\end{description} 
-
-%----------------------------------------------------------------------------------------
-%	MAJOR SECTION X - TEMPLATE - UNCOMMENT AND FILL IN
-%----------------------------------------------------------------------------------------
-
-%\section{Content Section}
-
-%\subsection{Subsection 1} % Sub-section
-
-% Content
-
-%------------------------------------------------
-
-%\subsection{Subsection 2} % Sub-section
-
-% Content
-
-%----------------------------------------------------------------------------------------
-%	CONCLUSION
-%----------------------------------------------------------------------------------------
-
-\section{Conclusion} % Major section
-
-\lipsum[12-13]
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
