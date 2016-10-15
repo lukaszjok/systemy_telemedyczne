@@ -9,3 +9,6 @@
 \contentsline {subsection}{\numberline {3.1}Og\IeC {\'o}lny zarys koncepcyjny}{6}
 \contentsline {subsection}{\numberline {3.2}Rodzaje przywo\IeC {\l }a\IeC {\'n} oraz ich oznaczenia}{7}
 \contentsline {subsection}{\numberline {3.3}Rozwi\IeC {\k a}zania sprz\IeC {\k e}towe}{7}
+\contentsline {subsection}{\numberline {3.4}Przep\IeC {\l }yw informacji, model sieci}{8}
+\contentsline {section}{\numberline {4}Zasilanie}{8}
+\contentsline {subsection}{\numberline {4.1}Zasilanie awaryjne}{8}

@@ -186,8 +186,24 @@ W zależności od rodzaju przywołania przewidziano dla każdego z nich odpowied
 \end{itemize}
 \subsection{Rozwiązania sprzętowe}
 
-Począwszy od terminali pacjentów, należy wspomnieć, iż będą to własne urządzenia skonstruowane specjalnie na potrzeby tego projektu. Oparte o mikrokontroer STM32 z rdzeniem CORTEX. Terminal będzie zawierał 4 duże, ergonomiczne przyciski o barwach odpowiadającym rodzajom wezwania, o których będzie mowa w kolejnych rozdziałach. Jeden z przycisków służyć będzie do odwołania przywołania, np. w chwili omyłkowego wduszenia przycisku. 
+Począwszy od terminali pacjentów, należy wspomnieć, iż będą to własne urządzenia skonstruowane specjalnie na potrzeby tego projektu. Oparte o mikrokontroler STM32 z rdzeniem CORTEX. Terminal będzie zawierał 4 duże, ergonomiczne przyciski o barwach odpowiadającym rodzajom wezwania, o których będzie mowa w kolejnych rozdziałach. Jeden z przycisków służyć będzie do odwołania przywołania, np. w chwili omyłkowego wduszenia przycisku. Każdy terminal wyposażony będzie także w moduł WiFi, służący do przesyłania danych do serwera. Przewidziano dwa rodzaje zasilania: bateryjny oraz stacjonarny - zasilanie z sieci energetycznej. 
+\\
+Terminal centrali będzie tabletem (system ANDROID)z zainstalowanym niezbędnym oprogramowaniem pobierającym informacje o zgłoszeniu z serwera. Do sieci będzie się łączył za pomocą modułu Wifi. Przewidziano także możliwość dźwiękowej sygnalizacji alarmu.
+\\
+Sercem systemu, a dokładniej, jego trzema głównymi trzonami będą 3 serwery oparte o mikrokomputery Raspbery Pi 3. Każdy z nich będzie posiadał dysk SSD gromadzący dane niezbędne do pracy.
+\begin{itemize}
+\item serwer obsługujący zdarzenia, powiadamianie odpowiednich central
+\item serwer bazodanowy - przechowujący wszystkie zdarzenia w obrębie funkcjonowania systemu
+\item serwer backup - gromadzący kopię zapasową całego systemu wykorzystujący technologię RAID5.
+\end{itemize}
 
+Dla zapewnienia łączności pomiędzy poszczególnymi elementami rozwiązania zbudowana zostanie zamknięta sieć LAN - INTRANET, uniemożliwiając w ten sposób dostęp do zasobów osób trzecich. Jednak temu zagadnieniu zostanie poświęcony osobny paragraf.
+
+\subsection{Przepływ informacji, model sieci}
+
+
+\section{Zasilanie}
+\subsection{Zasilanie awaryjne}
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
