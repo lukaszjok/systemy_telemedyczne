@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.8.8)  15 OCT 2016 15:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.8.8)  16 OCT 2016 17:35
 entering extended mode
 **./essay_1.tex
 (essay_1.tex
@@ -607,24 +607,30 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 140.
- [4] [5] [6] [7] [8] [9] (essay_1.aux) ) 
+ [4] [5] [6] [7]
+Overfull \hbox (0.88017pt too wide) in paragraph at lines 208--209
+\OT4/cmr/m/n/12 Jak ju» wcze-±niej wspo-mnia-no, na po-zio-mie war-stwy ª¡-cza 
+da-nych mo-de-lu OSI/ISO
+ []
+
+[8] [9] [10] (essay_1.aux) ) 
 Here is how much of TeX's memory you used:
  2824 strings out of 493335
  36447 string characters out of 3145275
- 205699 words of memory out of 3000000
+ 206699 words of memory out of 3000000
  6298 multiletter control sequences out of 15000+200000
  14507 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,4n,25p,1670b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
-{d:/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.
-enc}{d:/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}{d:/MiKTeX 2.9/fonts/enc/dvips/p
-l/plsc.enc}<d:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/MiKTeX 
-2.9/fonts/type1/public/pl/plbx12.pfb><d:/MiKTeX 2.9/fonts/type1/public/pl/plcsc
-10.pfb><d:/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><d:/MiKTeX 2.9/fonts/type
-1/public/pl/plti12.pfb>
-Output written on essay_1.pdf (10 pages, 76104 bytes).
+{d:/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{d:/MiKT
+eX 2.9/fonts/enc/dvips/pl/plit.enc}{d:/MiKTeX 2.9/fonts/enc/dvips/pl/plsc.enc}<
+d:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/MiKTeX 2.9/fonts/ty
+pe1/public/pl/plbx12.pfb><d:/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><d:/M
+iKTeX 2.9/fonts/type1/public/pl/plr12.pfb><d:/MiKTeX 2.9/fonts/type1/public/pl/
+plti12.pfb>
+Output written on essay_1.pdf (11 pages, 79114 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
+ 61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

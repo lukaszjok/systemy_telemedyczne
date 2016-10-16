@@ -205,7 +205,20 @@ Zgodnie z wcześniejszymi założeniami w projekcie możliwym jest wyszczególni
 
 \subsection{Zastosowane protokoły}
 
-Jak już wcześniej wspomniano, na poziomie warstwy łącza danych modelu OSI/ISO zastosowane będą protokoły TCP i UDP do przesyłania pakietów danych. Jenak na poziomie warstwy aplikacji wykorzystano protokółu HTTP w wersji drugiej do przesyłania informacji stricte związanych z obsługą zdarzeń - np.  identyfikator urządzenia, numer pokoju, rodzaj zgłoszenia. Zdecydowano się właśnie na takie podejście, ze względu na dojrzałość protokołu, bardzo dobre wsparcie techniczne oraz łatwą możliwość śledzenia poprawności generowanych zapytań. Ponadto protokół ten nawiązując połączenie z węzłem docelowym wysyła informację do urządzenia źródłowego, w której infrmuje czy połączenie zostało nawiązane prawidłowo. Dodatkowo nowa (druga) wersja protokołu pozwala na możliwość szyfrowania połączenia na poziomie tego protokołu z pominięciem doatkowych serwerów, tudzież usług szyfrujących.
+Jak już wcześniej wspomniano, na poziomie warstwy łącza danych modelu OSI/ISO zastosowane będą protokoły TCP i UDP do przesyłania pakietów danych. Jenak na poziomie warstwy aplikacji wykorzystano protokółu HTTP w wersji drugiej do przesyłania informacji stricte związanych z obsługą zdarzeń - np.  identyfikator urządzenia, numer pokoju, rodzaj zgłoszenia. Zdecydowano się właśnie na takie podejście, ze względu na dojrzałość protokołu, bardzo dobre wsparcie techniczne oraz łatwą możliwość śledzenia poprawności generowanych zapytań. Ponadto protokół ten nawiązując połączenie z węzłem docelowym wysyła informację do urządzenia źródłowego, w której informuje czy połączenie zostało nawiązane prawidłowo. Dodatkowo nowa (druga) wersja protokołu pozwala na możliwość szyfrowania połączenia na poziomie tego protokołu z pominięciem dodatkowych serwerów, tudzież usług szyfrujących.
+
+\subsection{Struktura nagłówka generowanego przez terminale}
+
+Chcąc ograniczyć wykorzystanie ruchu sieciowego, ale przede wszystkim możliwie jak najszybciej przesyłać informacje o przywołaniu generowanym z terminala zaimplementowano krótki nagłówek komunikacyjny. Dzięki takiemu podejściu zostaną przesłane wszystkie niezbędne informacje w prostą, czytelną metodą (zarówno dla urządzeń, jak i człowieka, np. programisty monitorującego poprawność systemu). To łąńcuch znakowy, w którym kolejne duże litery D,F,R,B,A oznaczają oddział, piętro, salę, łóżko, rodzaj alarmu (pierwsze litery zostały dobrane na podstawie angielskich słów: department, floor, room, bed, alert. Natomiast w miejsce małych liter x, y, z, t, s podstawione będą wartości liczbowe (począwszy od zera) określające wartość parametrów przywołania (identyfikowanych przez duże litery). W związku z powyższym generowany nagłówek przyjmować będzie postać:
+\begin{center}
+DxFyRzBtAs
+\end{center}
+Poniżej przedstawiono przykładowy ciąg znakowy z wartościami parametrów:
+
+\begin{center}
+D11F3R505B3A1
+\end{center}
+Powyższy przykład oznacza że zgłoszenie zostało wygenerowane przez pacjenta z oddziału 11, znajdującego się na 3. piętrze, który przebywa w pokoju nr 505 na łóżku z numerem 3, a rodzaj  generowanego alertu to 1.
 
 \section{Zasilanie}
 \subsection{Zasilanie awaryjne}
