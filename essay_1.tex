@@ -220,7 +220,35 @@ D11F3R505B3A1
 \end{center}
 Powyższy przykład oznacza że zgłoszenie zostało wygenerowane przez pacjenta z oddziału 11, znajdującego się na 3. piętrze, który przebywa w pokoju nr 505 na łóżku z numerem 3, a rodzaj  generowanego alertu to 1.
 
+\subsection{Generowany nagłówek HTTP}
+
+Zgodnie z założeniami, terminale w chwili identyfikacji rodzaju zgłoszenia i zbudowania łańcucha znakowego (nagłówka przywołania) opisanego w punkcie 4.2 będą w stanie wygenerować nagłówek HTTP i takie zapytanie wysłać do wskazanego serwera interpretującego zgłoszenie. Poniżej przedstawiono strukturę takiego zapytania:
+
+\begin{center}
+tutaj wstawić kod zapytania HTTP
+\end{center}
+
+W celu zawiązania połączenia terminal, w pierwszym kroku, wskazuje adres hosta z jakim chce się połączyć, następnie deklaruje wielkość przesyłanych danych i na końcu następuje przesłanie łańcucha znakowego. Serwer interpretuje odebrane i przypadku poprawnego połączenia zwraca kod 200, który sygnalizuje prawidłowe połączenie. W rezultacie terminal może zakończyć połączenie z serwerem i przejść do stanu spoczynku.
+\\
+W przypadku gdy nie możliwe jest nawiązanie poprawnego połączenia z serwerem, terminal, będzie robił to tak długo, aż serwer mu odpowie, umożliwi przesłanie zgłoszenia. Automatycznie po 3 nieudanych próbach połączenia wychodzącego z terminala - zacznie on generować oscylujący sygnał dźwiękowy.
+
+
+
+\subsection{Gromadzenie danych}
+Wygenerowane zapytanie z terminala będzie uruchamiało skrypt PHP na serwerze bazodanowym(mySQL). Serwer bazodanowy zostanie zainstalowany na osobnym, dedykowanym do tego celu mikrokomputerze Raspberry Pi. Dostęp do bazy danych będzie łatwy i intuicyjny poprzez przejrzysty panel administracyjny - phpMyAdmin. Dzięki temu same tabele jak i opcje konfiguracyjne będą reprezentowane przez graficzny interfejs.\\
+Dane w tabelach zostaną sprowadzone do trzeciej postaci normalnej co zapewni szybki i niezawodny dostęp do danych. 
+
+\subsection{Interpretacja zgromadzonych danych}
+Zgromadzone dane na serwerze bazodanowym, po uprzednim zgromadzeniu ich tam zostaną sparsowane do czytelnej, dla użytkownika, formy. W tym celu specjalnie przygotowany skrypt PHP na żądanie użytkownika odpowiednio zareaguje na nadchodzącą akcję. Skrypt cały czas będzie nasłuchiwał zmiany zachodzące w bazie danych, w momencie nadejścia zgłoszenia, wskaże dane pacjenta na podstawie jego numeru id. Przekazane dane zostaną przetransformowane z postaci nagłówka na czytelne dla człowieka dane.
+
+\subsection{Prezentacja zgromadzonych danych}
+Zgłoszenia systemu będą prezentowane w czytelny sposób. Zapewni to zastosowanie nowoczesnych framework'ów takich jak: Bootstrap, Fundation, Spring. Implementacja responsywnych motywów umożliwi łatwą instalację systemu na sprzęcie pochodzącym od różnych dostawców. Umożliwi to uniezależnienie się od danego producenta, co znacząco wpłynie na obniżenie kosztu zakupu nowych urządzeń. 
+\\
+Prezentacja danych odbywać się będzie w dwojaki sposób. Pierwszym podejściem będzie umożliwienie wyświetlania danych na komputerach klasy PC oraz notebookach w postaci aplikacji webowej. Drugim rozwiązaniem jest implementacja responsywnego motywu w aplikacji Android.
+
 \section{Zasilanie}
+
+
 \subsection{Zasilanie awaryjne}
 
 %----------------------------------------------------------------------------------------
