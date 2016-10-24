@@ -24,6 +24,7 @@
 
 \usepackage{geometry} % Required to change the page size to A4
 \geometry{a4paper} % Set the page size to be A4 as opposed to the default US Letter
+\newgeometry{tmargin=2cm, bmargin=2cm, lmargin=2cm, rmargin=2cm}
 
 \usepackage{graphicx} % Required for including pictures
 
@@ -147,16 +148,16 @@ Istotną kwestią, rewolucją względem dotychczas stosowanych rozwiązań, jest
 %------------------------------------------------
 
 \subsection{Modularyzacja} % Sub-section
-Chcąc sprawić, by system przywoławczy był sprawnie funkcjonującym należy dążyć do jego decentralizacji - zarówno pod względem sprzętowym , jak i w ujęciu programowym. Dzięki takiemu rozwiązaniu w przypadku awarii jednego z komponentów nie zostanie zakłócona integralność. Co więcej system powinie być w stanie zlokalizować źródło problemu i w miarę możliwości być w stanie obsłużyć tą sytuację umożliwiając kontynuację pracy bez uszkodzonych elementów infrastruktury.
+Chcąc sprawić, by system przywoławczy był sprawnie funkcjonującym należy dążyć do jego decentralizacji - zarówno pod względem sprzętowym , jak i w ujęciu programowym. Dzięki takiemu rozwiązaniu w przypadku awarii jednego z komponentów nie zostanie zakłócona integralność. Co więcej system powinien być w stanie zlokalizować źródło problemu i w miarę możliwości być w stanie obsłużyć tą sytuację umożliwiając kontynuację pracy bez uszkodzonych elementów infrastruktury.
 Taką modularyzację można realizować przez instalację poszczególnych usług czy oprogramowania na kolejnych fizycznych serwerach. W przypadku wymiany informacji zastosowane zostaną Punkty dostępowe sieci WLAN, chcąc zwiększyć dostępność sieci - wystarczy zainstalować kolejne takie urządzenie lub zastosować antenę, zwiększającą zasięg. 
 \subsection{Miniaturyzacja} % Sub-sub-section
 Całkowicie nowym podejściem jakie zostanie zastosowane w projekcie jest porzucenie kosztownych i zużywających wiele energii elektrycznej serwerów i urządzeń im towarzyszących. W zamian użyte zostaną mikrokomputery Raspberry Pi 3. Ich parametry techniczne pozwalają na implementację zaawansowanych serwerów i usług. Ze względu na bardzo małe koszty związane z zakupem tego sprzętu możliwym jest instalacja poszczególnych usług na kolejnych urządzeniach. Dzięki temu uzyskamy izolację między systemami, która może być użyteczną w przypadku awarii. Ich minimalne zapotrzebowanie na prąd pozwoli na długoterminowe funkcjonowanie rozwiązania na zasilaniu akumulatorowym. Poniżej przedstawiono opis mikrokomputera Raspberry Pi 3:
 \begin{itemize}
 \item Procesor chipset - Broadcom BCM2837 64-bit
 \item Rdzeń	Quad-Core - ARM Cortex A53
-\item Taktowanie - 1,2 GHz
+\item Taktowanie - 1.2 GHz
 \item Pamięć RAM - 1 GB LPDDR2 @ 900 MHz
-\item Zasilanie	- 5,1 V 
+\item Zasilanie	- 5.0 V 
 \item Pobór prądu ~300-400 mAh
 \end{itemize}
 
@@ -168,6 +169,8 @@ System przywoławczy opiera się o wykorzystanie dedykowanych urządzeń: pilot�
 \\
 W nawiązaniu do głównego zamysłu dotyczącego obsługi zdarzeń, gromadzenia informacji o pacjentach i modelu reagowania na te zdarzenia, system będzie realizował możliwie najprostsze ale co ważne - najnowocześniejsze technologie. W chwili gdy pacjent przy pomocy dowolnego narzędzia zasygnalizuje chęć przywołania personelu medycznego - zgłoszenie to natychmiastowo trafi do odpowiedzialnej kadry, system zapisze godzinę, dane pacjenta, oraz rodzaj przywołania. W tej samej chwili na zewnątrz sali szpitalnej zaświeci się lampka przyjmująca barwę odpowiadającą danemu zgłoszeniu. Pozwoli to personelowi na szybką identyfikację odpowiedniej sali. Ponadto na panelu centrali pojawi się także takowa informacja  - z informacją o numerem sali oraz szczegółowe informacje o pacjencie - jego personalia, historia poprzednich przywołań oraz skrót przebiegu choroby(powód hospitalizacji).
 
+
+\newpage
 \subsection{Rodzaje przywołań oraz ich oznaczenia}
 
 W projekcie przewidziano 3 rodzaje przywołań - alarmów:
@@ -201,7 +204,7 @@ Dla zapewnienia łączności pomiędzy poszczególnymi elementami rozwiązania z
 
 \section{Przepływ informacji, model sieci}
 
-Zgodnie z wcześniejszymi założeniami w projekcie możliwym jest wyszczególnienie warstwy odnoszącej się do przepływu danych. Dla prawidłowego działania całego systemu koniecznym jest istnienie sieci komputerowej. Chcąc zapewnić najwyższy poziom bezpieczeństwa zalecaną jest implementacja sieci przeznaczone wyłącznie dla proponowanego rozwiązania, zarówno odnosząc się do urządzeń sieciowych takich jak przełączniki, rozdzielacze czy punkty dostępowe jak i unikalna, przemyślana  i spójna adresacja IP. Jest to rozwiązanie optymalne, jednak nie jest koniecznym do rozpoczęcia realizacji projektu. W przypadku gdy placówka medyczna posiada już infrastrukturę sieciową możliwym jest zastosowanie rozwiązań typu VLAN czy VPN. W dużej mierze zastosowanie danego podejścia jest ściśle zależne od polityki bezpieczeństwa i zasobów teleinformatycznych danej placówki. W kontekście projektu wymogiem koniecznym do jego realizacji jest zapewnienie niezakłóconego, ciągłego dostępu do sieci informatycznej,  umożliwiającej przesyłanie danych z wykorzystaniem protokołu TCP i UDP dla wszystkich urządzeń.
+Zgodnie z wcześniejszymi założeniami w projekcie możliwym jest wyszczególnienie warstwy odnoszącej się do przepływu danych. Dla prawidłowego działania całego systemu koniecznym jest istnienie sieci komputerowej. Chcąc zapewnić najwyższy poziom bezpieczeństwa zalecaną jest implementacja sieci przeznaczone wyłącznie dla proponowanego rozwiązania, zarówno odnosząc się do urządzeń sieciowych takich jak przełączniki czy punkty dostępowe jak i unikalna, przemyślana  i spójna adresacja IP. Jest to rozwiązanie optymalne, jednak nie jest koniecznym do rozpoczęcia realizacji projektu. W przypadku gdy placówka medyczna posiada już infrastrukturę sieciową możliwym jest zastosowanie rozwiązania typu VLAN. W dużej mierze zastosowanie danego podejścia jest ściśle zależne od polityki bezpieczeństwa i zasobów teleinformatycznych danej placówki. W kontekście projektu wymogiem koniecznym do jego realizacji jest zapewnienie niezakłóconego, ciągłego dostępu do sieci informatycznej,  umożliwiającej przesyłanie danych z wykorzystaniem protokołu TCP i UDP dla wszystkich urządzeń.
 
 \subsection{Zastosowane protokoły}
 
@@ -222,11 +225,7 @@ Powyższy przykład oznacza że zgłoszenie zostało wygenerowane przez pacjenta
 
 \subsection{Generowany nagłówek HTTP}
 
-Zgodnie z założeniami, terminale w chwili identyfikacji rodzaju zgłoszenia i zbudowania łańcucha znakowego (nagłówka przywołania) opisanego w punkcie 4.2 będą w stanie wygenerować nagłówek HTTP i takie zapytanie wysłać do wskazanego serwera interpretującego zgłoszenie. Poniżej przedstawiono strukturę takiego zapytania:
-
-\begin{center}
-tutaj wstawić kod zapytania HTTP
-\end{center}
+Zgodnie z założeniami, terminale w chwili identyfikacji rodzaju zgłoszenia i zbudowania łańcucha znakowego (nagłówka przywołania) opisanego w punkcie 4.2 będą w stanie wygenerować nagłówek HTTP i takie zapytanie wysłać do wskazanego serwera interpretującego zgłoszenie. 
 
 W celu zawiązania połączenia terminal, w pierwszym kroku, wskazuje adres hosta z jakim chce się połączyć, następnie deklaruje wielkość przesyłanych danych i na końcu następuje przesłanie łańcucha znakowego. Serwer interpretuje odebrane i przypadku poprawnego połączenia zwraca kod 200, który sygnalizuje prawidłowe połączenie. W rezultacie terminal może zakończyć połączenie z serwerem i przejść do stanu spoczynku.
 \\
@@ -247,22 +246,37 @@ Zgłoszenia systemu będą prezentowane w czytelny sposób. Zapewni to zastosowa
 Prezentacja danych odbywać się będzie w dwojaki sposób. Pierwszym podejściem będzie umożliwienie wyświetlania danych na komputerach klasy PC oraz notebookach w postaci aplikacji webowej. Drugim rozwiązaniem jest implementacja responsywnego motywu w aplikacji Android.
 
 \section{Zasilanie}
-
+Zasilanie jest jedną z najmocniejszych stron tego systemu. Do jego pracy każdego serwera potrzebny jest prąd o nominalnym napięciu 5V. Pobór prądu przez Raspberry Pi wynosi ok. 300mA, co czyni system bardo energooszczędnym. Chcąc sprostać najwyższym standardom, a co za tym idzie, pragnąc uczynić system stabilnym zastosowane będą stacjonarne zasilacze impulsowe.
 
 \subsection{Zasilanie awaryjne}
+Dzięki charakterystyce zasilania urządzeń możliwe jest zastosowanie zasilaczy UPS i wydajnych, tudzież pojemnych akumulatorów żelowych, które umożliwią niezakłóconą i nieprzerwaną pracę urządzeń przed bardzo długi czas.
 
+\newpage
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 
-\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+\begin{thebibliography}{99}
+\bibitem{pa} 
+Nurse Call SystemsAccording to DIN VDE 0834 Safely into the futureSafety and Security Division, Notes on Planning, Installation, Operation and Maintenance of Nurse Call Systems according to DIN VDE 0834, e.g. in hospitals, residential homes for the elderly and senior citizens, care institutions, forensic clinics and prisons, Edited by: Edith Hoffmann, Czasopismo ZWEI, Grudzień 2013
 
-\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
-Figueredo, A.~J. and Wolf, P. S.~A. (2009).
-\newblock Assortative pairing and life history strategy - a cross-cultural
-  study.
-\newblock {\em Human Nature}, 20:317--330.
- 
+\bibitem{pa}
+Rozporządzenie Ministra Pracy i Polityki Społecznej z dnia 23 sierpnia 2012 r. w sprawie domów pomocy społecznej, 2012, [dostęp 6. grudnia 2015]. Dostępny w Internecie: http://isap.sejm.gov.pl/DetailsServlet?id=WDU20120000964 
+Norma PN-EN ISO 11073-10404:2011 - wersja polska, Informatyka w ochronie zdrowia -- Komunikacja z osobistymi urządzeniami medycznymi -- Część 10404: Rodzaj urządzeń – Pulsoksymetry, 2014 
+
+\bibitem{pa}
+Norma DIN VDE 0834-1; VDE 0834-1:2000-04 – wersja angielska, Call systems in hospitals, nursing homes and similar institutions - Part 1: Requirements for equipment, erection and operation, 2000 
+
+\bibitem{pa}
+
+Rafał Stanisławczyk, Systemy przywoławcze w świetle przepisów, czasopismo Zabezpieczenia 2013, [dostęp 24. października 2016.]. Dostępny w Internecie:  http://zabezpieczenia.com.pl/systemy-przywo\%C5\%82awcze-w\%C2\%A0\%C5\%9Bwietle-przepis\%C3\%B3w 
+
+\bibitem{pa}
+
+Hypertext Transfer Protocol, encyklopedia internetowa WIKIPEDIA, [dostęp 24. października 2016.] Dostępny w Internecie: 
+https://pl.wikipedia.org/wiki/Hypertext\_Transfer\_Protocol
+
+
 \end{thebibliography}
 
 %----------------------------------------------------------------------------------------

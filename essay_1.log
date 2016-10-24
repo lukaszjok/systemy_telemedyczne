@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.8.8)  24 OCT 2016 21:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.8.8)  25 OCT 2016 00:21
 entering extended mode
 **./essay_1.tex
 (essay_1.tex
@@ -415,6 +415,39 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks17
 
 ("d:\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: 
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=500.484pt
+* \textheight=681.15898pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
 ("d:\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -462,23 +495,36 @@ Package: wrapfig 2003/01/31  v 3.6
 ("d:\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count93
-) (essay_1.aux)
+) (essay_1.aux
+
+LaTeX Warning: Label `pa' multiply defined.
+
+
+LaTeX Warning: Label `pa' multiply defined.
+
+
+LaTeX Warning: Label `pa' multiply defined.
+
+
+LaTeX Warning: Label `pa' multiply defined.
+
+)
 \openout1 = `essay_1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -488,15 +534,15 @@ LaTeX Font Info:    ... okay on input line 41.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
-* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=418.25368pt
-* \textheight=591.5302pt
-* \oddsidemargin=17.3571pt
-* \evensidemargin=17.3571pt
-* \topmargin=-7.86334pt
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=500.484pt
+* \textheight=681.15898pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -569,68 +615,84 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Font Info:    Try loading font information for OML+plm on input line 68.
+LaTeX Font Info:    Try loading font information for OML+plm on input line 69.
 
 ("d:\MiKTeX 2.9\tex\latex\polski\omlplm.fd"
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 68.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 69.
 
 
 ("d:\MiKTeX 2.9\tex\latex\polski\omsplsy.fd"
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 68.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 69.
 
 
 ("d:\MiKTeX 2.9\tex\latex\polski\omxplex.fd"
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 68.
+(Font)              <12> on input line 69.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 68.
+(Font)              <8> on input line 69.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 68.
+(Font)              <6> on input line 69.
  [1
+
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (essay_1.toc)
 \tf@toc=\write3
 \openout3 = `essay_1.toc'.
 
  [1] [2] [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 140.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 141.
 
 
 ("d:\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 140.
- [4] [5] [6] [7]
-Overfull \hbox (0.88017pt too wide) in paragraph at lines 208--209
-\OT4/cmr/m/n/12 Jak ju» wcze-±niej wspo-mnia-no, na po-zio-mie war-stwy ª¡-cza 
-da-nych mo-de-lu OSI/ISO
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 141.
+ [4] [5] [6] [7] [8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
+[]\OT4/cmr/m/n/12 Rafaª Sta-ni-sªaw-czyk, Sys-te-my przy-wo-ªaw-cze w ±wie-tle 
+prze-pi-sów, cza-so-pi-smo
  []
 
-[8] [9] [10] [11] (essay_1.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
+\OT4/cmr/m/n/12 Za-bez-pie-cze-nia 2013, [do-st¦p 24. pa¹-dzier-ni-ka 2016.]. D
+o-st¦p-ny w In-ter-ne-cie:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
+\OT4/cmr/m/n/12 http://zabezpieczenia.com.pl/systemy-przywo%C5%82awcze-w%C2%A0%
+C5%9Bwietle-
+ []
+
+[10] (essay_1.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
  2824 strings out of 493335
- 36447 string characters out of 3145275
- 206699 words of memory out of 3000000
+ 36436 string characters out of 3145275
+ 206616 words of memory out of 3000000
  6298 multiletter control sequences out of 15000+200000
- 14507 words of font info for 39 fonts, out of 3000000 for 9000
+ 13969 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,4n,25p,1670b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
-{d:/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{d:
-/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}{d:/MiKTeX 2.9/fonts/enc/dvips/pl/plsc.
-enc}<d:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/MiKTeX 2.9/fon
-ts/type1/public/pl/plbx12.pfb><d:/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb>
-<d:/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><d:/MiKTeX 2.9/fonts/type1/publi
-c/pl/plti12.pfb>
-Output written on essay_1.pdf (12 pages, 82666 bytes).
+{d:/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{d:/MiKTeX 2.9/fonts/enc/dvips/pl/
+plit.enc}{d:/MiKTeX 2.9/fonts/enc/dvips/pl/plsc.enc}<d:/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb><d:/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><
+d:/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><d:/MiKTeX 2.9/fonts/type1/publ
+ic/pl/plr12.pfb><d:/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb>
+Output written on essay_1.pdf (11 pages, 83202 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
+ 61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
